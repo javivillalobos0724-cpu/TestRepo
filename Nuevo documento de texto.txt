@@ -1,0 +1,45 @@
+
+
+1. Identificación del objetivo
+-Máquina objetivo: metaexploit2
+
+-Puerto vulnerable: 21
+
+-Vulnerabilidad: Servicio FTP vsftpd 2.3.4 con backdoor remoto
+
+2. Escaneo con Nmap para detectar vulnerabilidad
+
+-Ejecutar un escaneo a la IP 172.10.6.15 para verificar si el puerto 21 está abierto y vulnerable. El script identifica automáticamente si se trata del servicio vsftpd con backdoor instalado.
+
+3. Explotación con Metasploit
+
+-Iniciar Metasploit (msfconsole).
+
+-Cargar el exploit
+
+-Configurar los parámetros:
+
+   -set RHOST 172.10.6.15
+
+   -set RPORT 21
+
+-Explotar
+
+4. Acceso al shell remoto
+Si el sistema es vulnerable, obtendremos una shell remota.
+
+Esto da acceso directo a la terminal del sistema operativo de metaexploit2.
+
+5. Dentro de la shell, se usa:whoami y responde el usuario que soy. De esta manera se que usuario soy.
+
+
+6. ¿Cómo ver el contenido de todos los archivos dentro del root?
+ ls -a
+
+
+
+
+
+
+
+
